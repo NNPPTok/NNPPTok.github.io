@@ -1,0 +1,476 @@
+<html>
+<head>
+    <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"
+            integrity="sha256-NRJTrhZgAnjGqLP0lFQk+uslZrlV5M+z3efWGCMZQAU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.css"/>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script>
+	    function preloadImage(url) {
+		var img = new Image();
+		img.src = url;
+	    }
+	    preloadImage('img/footer.png');
+    </script>
+    <style>
+        body {
+            color: #fdfdfd;
+            background-color: #262626;
+        }
+
+        #office img {
+            max-width: 100%;
+        }
+
+        .career {
+            color: dodgerblue;
+        }
+
+        .page-footer {
+            position: fixed;
+            right: 15px;
+            bottom: 30px;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            padding: 5px;
+        }
+
+        .page-footer a {
+            margin-left: 4px;
+        }
+
+        .quarter {
+            color: aquamarine;
+        }
+
+        li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        body {
+            background-color: #262626;
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                background-color: #262626;
+            }
+        }
+
+    </style>
+    <title>No No! Pineapple Pizza NNPP Token</title>
+    <meta name="robots" content="noarchive">
+</head>
+<body>
+<div data-scroll-container>
+
+    <section class="py-1" data-scroll-section>
+        <div id="navbarflex">
+            <nav class="flex items-center justify-between flex-wrap bg-teal p-1">
+                <div class="flex items-center flex-no-shrink text-white mr-6">
+                    <a class="inline-block text-lg font-small px-4 py-2 border-4 border-transparent hover:text-red-400 focus:text-red-400 rounded-lg transition"
+                       href="index.html" data-scroll-to>
+                        <div style="text-align:center; display: flex;">
+                            <div style="display:inline; display: flex; flex-direction: row; align-items: center; margin-right:20px;">
+                                <img src="img/nnpplogo-2.png" height="50" width="50"></div>
+                            <div class="text-yellow-400 hover:text-red-400 focus:text-red-400"
+                                 style="display:inline; display: flex; flex-direction: row; align-items: center;"><span><b>$NNPP</b></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="block sm:hidden">
+                    <button @click="toggle"
+                            class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
+                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>
+                            Menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
+                    <div class="text-sm sm:flex-grow">
+                        <a class="inline-block text-base font-small px-4 py-2 border-4 border-transparent hover:text-red-400 focus:text-red-400 rounded-lg transition"
+                           href="#about-section" data-scroll-to>
+                            Project Info
+                        </a>
+                        <a class="inline-block text-base font-small px-4 py-2 border-4 border-transparent hover:text-red-400 focus:text-red-400 rounded-lg transition"
+                           href="#roadmap-section" data-scroll-to>
+                            Roadmap
+                        </a>
+                        <a class="inline-block text-base font-small px-4 py-2 border-4 border-transparent hover:text-red-400 focus:text-red-400 rounded-lg transition"
+                           href="#career-section" data-scroll-to>
+                            Career
+                        </a>
+                        <a class="inline-block text-base font-small px-4 py-2 border-4 border-transparent hover:text-red-400 focus:text-red-400 rounded-lg transition"
+                           href="#contact-section" data-scroll-to>
+                            Social & Contacts
+                        </a>
+                        <a class="inline-block text-base font-small px-4 py-2 border-4 border-transparent hover:text-red-400 focus:text-red-400 rounded-lg transition"
+                           href="#howtobuy-section" data-scroll-to>
+                            How to Buy
+                        </a>
+                    </div>
+                    <div style="text-align:center; display: flex;">
+                        <div style="display:inline; display: flex; flex-direction: row; align-items: center; margin-right:20px;">
+                            <a class="inline-block text-base font-small px-4 py-2 border-4 border-transparent hover:text-red-400 focus:text-red-400 rounded-lg transition"
+                               href="#" data-scroll-to><img src="img/reddit.png" height="30" width="30"></a></div>
+                        <div style="display:inline; display: flex; flex-direction: row; align-items: center; margin-right:20px;">
+                            <a class="inline-block text-base font-small px-4 py-2 border-4 border-transparent hover:text-red-400 focus:text-red-400 rounded-lg transition"
+                               href="#" data-scroll-to><img src="img/telegram.png" height="30" width="30"></a>
+                        </div>
+                        <div style="display:inline; display: flex; flex-direction: row; align-items: center; margin-right:20px;">
+                            <a class="inline-block text-base font-small px-4 py-2 border-4 border-transparent hover:text-red-400 focus:text-red-400 rounded-lg transition"
+                               href="#" data-scroll-to><img src="img/twitter.png" height="30" width="30"></a></div>
+                        <div style="display:inline; display: flex; flex-direction: row; align-items: center;">
+                            <a class="inline-block contract-address-href text-sm font-small px-4 py-2 border-white border rounded hover:text-red-400 focus:text-red-400 mt-4 sm:mt-0 rounded-lg hover:text-teal hover:border-red-400 transition"
+                               href="#">
+                                Buy on PankakeSwap
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="main-section" class="py-10 bg-gradient-to-r from-blue-700 via-pink-500 via-red-500 to-yellow-400"
+             data-scroll-section> <!-- style="background-image:url(img/pizza1.jpeg)" -->
+        <div class="container px-5 mx-auto">
+            <div id="main" class="lg:grid grid-cols-5 gap-4 items-start">
+                <div class="col-span-3">
+			<span>
+			  <p class="text-5xl font-extrabold sm:mt-8" data-scroll data-scroll-sticky data-scroll-target="#main"><span
+                      class="text-yellow-400" style="text-shadow: 0 0 2px #000;">NO, NO! PINEAPPLE PIZZA</span> <span
+                      class="text-white">COIN</span></p>
+			  <p class="text-2xl sm:mt-10 sm:pr-40 mt-4" data-scroll data-scroll-target="#main">A decentralized cryptocurrency written from scratch <span
+                      class="text-yellow-400" style="text-shadow: 0 0 2px #000;">FOR TRUE PIZZA LOVERS</span>. Feature rich with a prize pool that rewards <span
+                      class="text-yellow-400" style="text-shadow: 0 0 2px #000;">YOU</span> with <span
+                      class="text-yellow-400" style="text-shadow: 0 0 2px #000;">PIZZA</span>!!!</p>
+			  <p class="sm:mt-8 mt-4" data-scroll data-scroll-delay="1.1" data-scroll-speed="1"
+                 data-scroll-direction="horizontal" data-scroll-target="#main">
+			  	<a class="inline-block text-sm font-small px-4 py-2 border-white border rounded hover:text-red-400 focus:text-red-400 mt-4 sm:mt-0 rounded-lg hover:text-teal hover:border-red-400 transition"
+                   href="https://raw.githubusercontent.com/nnpptoken/nnpptoken.github.io/main/PizzaPaper.pdf">Read our Pizza Paper (white paper)</a>
+				</p>
+			  <p class="sm:mt-8 mt-4" data-scroll data-scroll-delay="1.4" data-scroll-speed="1"
+                 data-scroll-direction="horizontal" data-scroll-target="#main">
+                  <a class="inline-block text-sm font-small px-4 py-2 border-white border rounded hover:text-red-400 focus:text-red-400 mt-4 sm:mt-0 rounded-lg hover:text-teal hover:border-red-400 transition contract-address-href"
+                     href="#">Buy on PankakeSwap - Contract address: <span
+                          class="contract-address-html"></span> </a>
+			  </p>
+			  <p class="sm:mt-8 mt-4" data-scroll data-scroll-delay="1.7" data-scroll-speed="1"
+                 data-scroll-direction="horizontal" data-scroll-target="#main">
+			  	<span class="inline-block text-sm font-small px-4 py-2 border-white border rounded focus:text-red-400 mt-4 sm:mt-0 rounded-lg hover:text-teal transition">Live Total Prize Pool Value: <span class="total-pool-value text-yellow-400" style="text-shadow: 0 0 2px #000;"></span> $NNPP <span
+                        class="updated-real-time">Loading...</span></span>
+				</p>
+			</span>
+                </div>
+                <div class="col-span-2 text-xl pt-4 lg:pt-0">
+                    <p class="mb-8"><img src="img/pizza.png"/></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-section" class="py-20" data-scroll-section>
+        <div class="container px-5 mx-auto">
+            <div id="about" class="lg:grid grid-cols-2 gap-4 items-start">
+                <h2 class="text-5xl font-extrabold" data-scroll data-scroll-sticky data-scroll-target="#about">Currency details</h2>
+                <div class="text-xl pt-4 lg:pt-0">
+                    <p class="mb-8">NNPP is an ERC20 (BEP20) token. It lives in the Binance Smart Chain.</p>
+                    <p class="mb-8">The token's features are:</p>
+                    <p class="mb-8">
+                        <ul>
+                            <li>• Prizes in coins to all active users</li>
+                            <li>• 40% of the total supply burnt</li>
+                            <li>• 40% of the total supply in PancakeSwap</li>
+                            <li>• The first NNPP transactions are with 0% fees, be the first to buy it!</li>
+                            <li>• NNPP subsequent transactions carry a small 2% fee in NNPP</li>
+                            <li>• Marketing account to advertise $NNPP all over the globe</li>
+                            <li>• Small gas fee thanks to being on Binance Smart Chain</li>
+                        </ul>
+                    </p><br>
+                    <p class="mb-8">The NNPP fee is distributed to the marketing account (0.1%) and to the pool (1.9%).</p>
+                    <p class="mb-8"><span class="text-yellow-400" style="text-shadow: 0 0 2px #000;">For any transaction the sender may win a part of the pool prize.</span> Up to 40% of the whole pool prize can be won by the sender of any transaction.</p>
+                    <p class="mb-8">To get your chance of winning the prizes, make a transaction in NNPP. <span class="text-yellow-400" style="text-shadow: 0 0 2px #000;">Winners</span> are randomly chosen <span class="text-yellow-400" style="text-shadow: 0 0 2px #000;">ON EACH TRANSACTION</span>!</p>
+                    <p class="mb-8">The prize pool amounts to <span class="total-pool-value text-yellow-400" style="text-shadow: 0 0 2px #000;">Loading...</span> $NNPP!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap-section"
+             class="relative py-20 bg-gradient-to-r from-blue-700 via-pink-500 via-red-500 to-yellow-400"
+             data-scroll-section>
+        <h2 class="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -skew-x-12 whitespace-nowrap text-6xl sm:text-9xl font-extrabold py-4">
+            <span class="inline-block" data-scroll data-scroll-repeat data-scroll-speed="3"
+                  data-scroll-call="randomizeTextColor">R</span>
+            <span class="inline-block" data-scroll data-scroll-repeat data-scroll-speed="2"
+                  data-scroll-call="randomizeTextColor">o</span>
+            <span class="inline-block" data-scroll data-scroll-repeat data-scroll-speed="3"
+                  data-scroll-call="randomizeTextColor">a</span>
+            <span class="inline-block" data-scroll data-scroll-repeat data-scroll-speed="2"
+                  data-scroll-call="randomizeTextColor">d</span>
+            <span class="inline-block" data-scroll data-scroll-repeat data-scroll-speed="3"
+                  data-scroll-call="randomizeTextColor">m</span>
+            <span class="inline-block" data-scroll data-scroll-repeat data-scroll-speed="2"
+                  data-scroll-call="randomizeTextColor">a</span>
+            <span class="inline-block" data-scroll data-scroll-repeat data-scroll-speed="3"
+                  data-scroll-call="randomizeTextColor">p</span>
+        </h2>
+        <div class="transform rotate-6 skew-x-12 mb-20">
+            <div data-scroll data-scroll-direction="horizontal" data-scroll-speed="20"
+                 data-scroll-target="#roadmap-section">
+                <span class="text-3xl sm:text-4xl md:text-6xl 2xl:text-7xl bg-gradient-to-l from-pink-500 via-red-500 to-yellow-400 p-5 whitespace-nowrap">From every pizzeria</span>
+            </div>
+        </div>
+
+        <div class="container px-5 mx-auto mb-5">
+            <div class="sm:mt-12 mt-8 text-xl pt-4 lg:pt-0 text-center">
+                <p class="mb-8 quarter">Q4 2021</p>
+                <p>
+                <ul>
+                    <li>Launch of the coin</li>
+                    <li>Liquidity Pool creation on PankakeSwap</li>
+                    <li>Website and PizzaPaper creation</li>
+                    <li>Marketing campain on Twitter, Reddit and Telegram</li>
+                </ul>
+                </p>
+                <br>
+                <p class="mb-8 quarter">Q1 2022</p>
+                <p>
+                <ul>
+                    <li>Collaboration with restaurants to accept the coin starting with the USA, Europe and Asia</li>
+                    <li>Online and physical marketing campain using Marketing Fund</li>
+                    <li>Add new prizes with daily REAL FOOD coupons</li>
+                </ul>
+                </p>
+                <p class="mb-8 quarter">Q2 2022</p>
+                <p>
+                <ul>
+                    <li>Collaboration with food delivery companies to accept $NNPP</li>
+                    <li>Introduction of new features to the token (in developement, surprise!)</li>
+                    <li>Development of ETH Chain Token and auditing of double contract</li>
+                    <li>$NNPP in major cryptocurrency exchanges</li>
+                </ul>
+                <p class="mb-8 quarter">Q3 2022</p>
+                <p>
+                <ul>
+                    <li>Hiring and team expansion</li>
+                    <li>Creation of independend $NNPP Blockchain</li>
+                    <li>... Moon</li>
+                </ul>
+                </p>
+            </div>
+        <div class="transform -rotate-6 -skew-x-12 mt-35">
+            <div data-scroll data-scroll-direction="horizontal" data-scroll-speed="-20"
+                 data-scroll-target="#roadmap-section">
+                <span class="text-3xl sm:text-4xl md:text-6xl 2xl:text-7xl bg-gradient-to-l from-blue-700 to-pink-500 p-5 whitespace-nowrap">To the moon</span>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="career-section" class="py-20" data-scroll-section>
+        <div class="container px-5 mx-auto">
+            <div id="career" class="lg:grid grid-cols-2 gap-4 items-start">
+                <h2 class="text-5xl font-extrabold" data-scroll data-scroll-sticky data-scroll-target="#career">
+                    Join Us</h2>
+                <div class="text-xl pt-4 lg:pt-0">
+                    <p><span class="mb-8 career">Web Developer (full-stack)</span>
+					<p>You will integrate upcoming token features to our website. No web3 experience required.</p></p><br>
+                    <p><span class="mb-8 career">Solidity Developer</span>
+                    <p>You will drive the token with new features and new ideas. Solidity experience a must.</p></p><br>
+                    <p><span class="mb-8 career">Marketing Specialist</span>
+                    <p>You will work with new and current partners to spread the adoption of the token.</p></p><br>
+                    <div>We are committed to a community-first, transparent approach. Reach out to us on Reddit,
+                        Telegram or Twitter. <span class="mb-8 text-yellow-400" style="text-shadow: 0 0 2px #000;">Do Reach Out!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="howtobuy-section" class="py-20 bg-gradient-to-r from-blue-700 via-pink-500 via-red-500 to-yellow-400" data-scroll-section>
+        <div class="container px-5 mx-auto">
+            <div id="howtobuy" class="lg:grid grid-cols-2 gap-4 items-start">
+                <h2 class="text-5xl font-extrabold" data-scroll data-scroll-sticky data-scroll-target="#howtobuy">How to buy</h2>
+                <div class="text-xl pt-4 lg:pt-0">
+                    <p class="mb-8">Buy BNB on your favorite exchange (e.g. Binance or Crypto.com)</p>
+                    <p class="mb-8">Go to <a style="color: darkslategrey;" class="contract-address-href">PancakeSwap</a>
+                        and use the $NNPP address <span class="contract-address"></span></p>
+                    <p class="mb-8">Connect PankakeSwap to Metamask (<a
+                            href="https://www.youtube.com/watch?v=MfkqgXNPiHg" style="color: darkslategrey;">tutorial</a>)</p>
+                    <p class="mb-8">Buy $NNPP on PankakeSwap</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section" class="py-20" data-scroll-section>
+        <div class="relative px-5 text-center align-text-top">
+            <h2 class="top-1/4 left-1/2 text-2xl sm:text-5xl font-extrabold py-4" data-scroll data-scroll-repeat>
+                <span class="inline-block" data-scroll data-scroll-delay="0.15" data-scroll-speed="1">S</span>
+                <span class="inline-block" data-scroll data-scroll-delay="0.095" data-scroll-speed="1">o</span>
+                <span class="inline-block" data-scroll data-scroll-delay="0.085" data-scroll-speed="1">c</span>
+                <span class="inline-block" data-scroll data-scroll-delay="0.075" data-scroll-speed="1">i</span>
+                <span class="inline-block" data-scroll data-scroll-delay="0.065" data-scroll-speed="1">a</span>
+                <span class="inline-block" data-scroll data-scroll-delay="0.055" data-scroll-speed="1">l</span>
+            </h2>
+        </div>
+        <div class="container px-5 mx-auto">
+            <div class="sm:mt-12 mt-8 text-xl pt-4 lg:pt-0 text-center">
+                <p class="mb-8">Join our community of <span class="mb-8 text-yellow-400" style="text-shadow: 0 0 2px #000;">EXCLUSIVELY NO PINEAPPLE</span> pizza lovers and spread the word.</p>
+                <p class="mb-8">Our aim is to spread the verb: "<span class="mb-8 text-yellow-400" style="text-shadow: 0 0 2px #000;">NO, NO! PINEAPPLE PIZZA</span>", we want to introduce the token in restaurants and have the option to pay with $NNPP.</p> 	
+                <p><a class="mb-8 hover:text-red-400 focus:text-red-400" href="">Telegram</a></p> 
+                <p><a class="mb-8 hover:text-red-400 focus:text-red-400" href="">Reddit</a></p> 
+                <p><a class="mb-8 hover:text-red-400 focus:text-red-400" href="">Twitter</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section
+            class="h-screen flex items-center justify-center text-center bg-gradient-to-r from-blue-700 via-pink-500 via-red-500 to-yellow-400"
+            data-scroll-section>
+        <div class="container px-5 mx-auto"
+             style="background-position: center; background-image: url('img/footer.png'); background-repeat: no-repeat; background-size: auto 90%; position: absolute; width:99.9%; height:99.9%; display:flex;">
+            <p class="text-3xl"
+               style="text-align:center; display:inline; display: flex; flex-direction: row; align-items: center; margin-left:auto; margin-right:auto;">
+                We know: pineapples don't grow on trees, <br>but they don't end up on pizza either.</p>
+        </div>
+    </section>
+
+    <a class="back-to-top fixed bottom-24 right-4 text-red-500 hover:text-red-600 focus:text-red-600 transition opacity-0 invisible"
+       href="#intro" role="button" aria-label="Back to top" data-scroll-to>
+        <svg class="fill-current" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+             viewBox="0 0 24 24">
+            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 7.58l5.995 5.988-1.416 1.414-4.579-4.574-4.59 4.574-1.416-1.414 6.006-5.988z"/>
+        </svg>
+    </a>
+
+</div>
+
+<footer class="page-footer">
+    <span>We say No, <span class="mb-8 text-yellow-400" style="text-shadow: 0 0 2px #000;">NO</span>! to Pineapple Pizza </span>
+    <a href="index.html"><img width="24" height="24" src="img/nnpplogo-1.png" alt="nnpp"></a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script>
+    new Vue({
+        el: '#navbarflex',
+        data: {
+            open: false,
+        },
+        methods: {
+            toggle() {
+                this.open = !this.open
+            }
+        }
+    });
+
+    var backToTop = document.querySelector(".back-to-top");
+    var opacityClass = "opacity-0";
+    var visibilityClass = "invisible";
+    var scroll = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+        tablet: {smooth: true},
+        smartphone: {smooth: true}
+    });
+    var pool = 10000000000;
+    var poolrt = false;
+    var address = '0x26f63bafb7f402b246f062da5f5c2a1462e08fbd';
+    var pancakeswap = 'https://pancakeswap.finance/swap?outputCurrency=' + address;
+
+    var arrayOfColors = [
+        "#0a9396",
+        "#005f73",
+        "#ae2012",
+        "#3d405b",
+        "#003049",
+        "#bc6c25",
+        "#ff006e",
+        "#ef476f",
+        "#1982c4",
+        "#ee964b",
+        "#0ead69",
+        "#390099",
+        "#f6aa1c",
+        "#54101d",
+        "#2b2c28",
+        "#85c7f2",
+        "#e15a97",
+        "#2b70e3",
+        "#b36a5e"
+    ];
+
+    scroll.on("call", (value, way, obj) => {
+        if (value === "randomizeTextColor") {
+            if (way === "enter") {
+                obj.el.style.color = getRandomColor();
+            }
+        } else if (value === "toggleBackToTop") {
+            if (way === "enter") {
+                backToTop.classList.add(opacityClass, visibilityClass);
+            } else {
+                backToTop.classList.remove(opacityClass, visibilityClass);
+            }
+        }
+    });
+   window.addEventListener('load', async function () {
+       var x;
+       for (x of document.getElementsByClassName('contract-address-html'))
+           x.innerHTML = address;
+
+       for (x of document.getElementsByClassName('contract-address-href'))
+           x.href = pancakeswap;
+
+       for (x of document.getElementsByClassName('pancakeswap-link'))
+           x.innerHTML = pancakeswap;
+
+       for (x of document.getElementsByClassName('contract-address'))
+           x.innerHTML = address;
+
+       window.web3 = new Web3('https://bsc-dataseed1.binance.org:443');
+
+       await poolvalue();
+   });
+
+    function getRandomColor() {
+        var arrayLength = arrayOfColors.length;
+        var randomValue = Math.random() * arrayLength;
+        var roundedNumber = Math.floor(randomValue);
+        return arrayOfColors[roundedNumber];
+    }
+
+    async function retrieve() {
+        var abi = '[{"inputs": [], "name": "getPool", "outputs": [{"internalType": "uint256", "name": "", "type": "uint256"}], "stateMutability": "view", "type": "function", "constant": true}]';
+        var jabi = JSON.parse(abi);
+        var contract = new web3.eth.Contract(jabi, address);
+        try {
+            pool = await contract.methods.getPool().call();
+            poolrt = true;
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    async function poolvalue() {
+        await retrieve();
+
+        for (var x of document.getElementsByClassName('total-pool-value'))
+            x.innerHTML = pool;
+
+        if (poolrt)
+            for (var x2 of document.getElementsByClassName('updated-real-time'))
+                x2.innerHTML = 'Updated in real time';
+    }
+</script>
+</body>
+</html>
+
+
